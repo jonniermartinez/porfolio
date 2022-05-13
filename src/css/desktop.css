@@ -48,5 +48,11 @@
     .nav__buttoms{
       justify-content: center;
     }
+    .header__img-container{
+      margin-bottom: 1rem;
+    }
+    .header__title-container{
+      margin-bottom: 2.5rem;
+    }
   }  
   
