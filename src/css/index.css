@@ -5,7 +5,7 @@
 }
 :root{
   --mirege: #151625;
-  --bluetext: #111827;
+  --blue: rgb(17, 24, 39);
   --Turquoise: #33C6BF ;
   --Turquoise: #33C6BF;
   --tw-bg-opacity: 1;
@@ -39,7 +39,7 @@ h1, h2, h3, p{
     color: hsl(221, 39%, 11%);
   }
   body{
-    background: var(--mirege);
+    background: var(--blue);
   }
   .button{
     background: rgb(255, 255, 255); 
@@ -49,10 +49,14 @@ h1, h2, h3, p{
 /* ---------------*/
 body{
   /* background: var(--mirege); */
-  width:100%;
   height: auto;
   padding: 20px;
   font-family: 'Inter';
+}
+
+.main-container{
+  max-width: 1218px;
+  margin: 0 auto;
 }
 .header__nav{
   width: 100%;
@@ -85,15 +89,17 @@ body{
   padding: 6.5px;
   cursor: pointer;
 }
+.text-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+}
 .header__information{
   width: 100%;
   margin-top: 50px;
-  /* color: #fff; */
-  font-family: 'Manrope' ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+  font-family: 'Manrope';
 }
 .header__information img{
   width: 150px;
@@ -101,12 +107,16 @@ body{
   border-radius: 50%;
 }
 .header__information h1{
-  text-align: center;
+  text-align: justify;
   font-weight: 800;
   max-width: 536px ;
   font-size: 30px;
-  margin-bottom: 50px;
   line-height: 1.5;
+}
+@media (max-width:719px) {
+  .header__information h1{
+    text-align: center;
+  }
 }
 .header__information h1 span{
   /*color: var(--Turquoise) ;*/
