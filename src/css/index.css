@@ -181,6 +181,12 @@ body{
   .change-lenguje{
     display: none;
   }
+  .nav__buttoms{
+    width: 100%;
+  }
+  .header__nav{
+    width: 100%;
+  }
 }
 @media (min-width:900px){
  .nav__burger{
