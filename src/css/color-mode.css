@@ -1,0 +1,46 @@
+.nav-links:hover{
+    background: rgb(229, 231, 235);
+  }
+/*  .nav-links p:hover{
+    border-bottom: 1px solid var(--Turquoise);
+  }
+*/
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3, p{
+      color: hsl(0, 0%, 100%);
+    }
+    .button p{
+      color: hsl(221, 39%, 11%);
+    }
+    .nav-links p{
+      color: hsl(0, 0%, 100%);
+    }
+    body{
+      background: var(--blue);
+    }
+    .primary-button{
+      background-color: var(--soft-withe); 
+    }
+    .primary-button p{
+      color: var(--soft-blue);
+    }
+    .secundary--button{
+      background-color: var(--soft-blue);
+    }
+    .secundary--button p{
+      color: var(--soft-withe);
+    }
+    .nav-links:hover{
+      background: rgb(30, 41, 59);
+    }
+    .button:hover{
+        box-shadow: var(--soft-blue) 0px 0px 0px 4px, var(--soft-withe) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    }
+    .secundary--button:hover{
+        box-shadow: var(--soft-blue) 0px 0px 0px 4px, var(--soft-withe) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    }
+
+
+  }
+ 
+  /* ---------------*/

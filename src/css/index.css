@@ -1,195 +1,77 @@
+/* Estilos generales */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-  --mirege: #151625;
-  --blue: rgb(17, 24, 39);
-  --Turquoise: #33C6BF ;
-  --Turquoise: #33C6BF;
-  --tw-bg-opacity: 1;
+html{
+  font-size: 62.5%;
+  font-family: 'Inter';
 }
-/*Dark mode*/
+body{
+  height: auto;
+  padding: 20px;
+  font-family: 'Inter';
+}
+li {
+  list-style-type: none;
+}
 h1, h2, h3, p{
   color: hsl(221, 39%, 11%);
 }
 a{
   text-decoration: none;
 }
-.button p{
-   color: hsl(221, 39%, 11%);
+/* Variables */
+:root{
+  --mirege: #151625;
+  --blue: rgb(17, 24, 39);
+  --soft-blue: rgb(30, 41, 59);
+  --Turquoise: #33C6BF ;
+  --soft-withe: rgb(229, 231, 235);
 }
+/*General buttons*/
 .button{
-  width: 20rem;
-  height: 5.2rem;
-  display: inline-block;
-  border-radius: 9999px;
-  cursor: pointer;
+ width: 20rem;
+ height: 5.2rem;
+ display: inline-block;
+ border-radius: 9999px;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.7rem;
+ font-weight: 500;
+}
+.button:hover{
+  box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--blue) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+ }
+.primary-button{
+  background-color: var(--soft-blue);
+}
+.primary-button p{
+  color: var(--soft-withe);
+}
+.secundary--button{
+  background-color: var(--soft-withe);
+}
+.secundary--button p{
+  color: var(--soft-blue);
+} 
+.secundary--button:hover{
+  box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--mirege) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+ }
+/* Links of navigation */
+.nav-links{
+  width: auto;
+  height: auto;
+  padding: 1.5rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.7rem;
-  font-weight: 500;
-  background-color: rgb(229, 231, 235);
- }
- .button:hover{
-  box-shadow: rgb(17, 24, 39) 0px 0px 0px 4px, rgb(243, 244, 246) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
- }
-@media (prefers-color-scheme: dark) {
-  h1, h2, h3, p{
-    color: hsl(0, 0%, 100%);
-  }
-  .button p{
-    color: hsl(221, 39%, 11%);
-  }
-  .nav-links p{
-    color: hsl(0, 0%, 100%);
-  }
-  body{
-    background: var(--blue);
-  }
-  .button{
-    background: rgba(255, 255, 255, 0.89); 
-  }
-}
-
-/* ---------------*/
-html{
-  font-size: 62.5%;
-}
-body{
-  /* background: var(--mirege); */
-  height: auto;
-  padding: 20px;
-  font-family: 'Inter';
-}
-
-.main-container{
-  max-width: 1218px;
-  margin: 0 auto;
-}
-.header__nav{
-  width: 80%;
-  margin: 0 auto;
-  font-family: 'Inter';
-  display: flex;
-  justify-content: space-between;
-}
-.nav__items{
-  width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.nav__items .item{
-  /* color: #ffffff; */
-  list-style-type: none;
-}
-.display-none{
-  display: none;
-}
-.items__buttons{
-  width: auto;
-  height: 3rem;
-  font-size: 1.5rem;
-  padding: 2rem;
-}
-.nav-links{
-  background: none;
-}
-.nav-links:hover{
-  background: rgb(30, 41, 59);
-  box-shadow: none;
-}
-.nav__logo,
-.nav__burger{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.nav__burger{
-  background: rgba(240, 240, 240, .2);
-  text-align: center;
-  padding: 6.5px;
   cursor: pointer;
-}
-.text-header{
-  width: 80%;
-  margin: 0 auto 3rem auto;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.header__information{
-  width: 100%;
-  margin-top: 50px;
-  font-family: 'Manrope';
-}
-.header__information img{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-.header__information h1{
-  text-align:left;
-  font-weight: 900;
-  max-width: 536px ;
-  font-size: calc(2.8rem + 1vw);
-  line-height: 5rem;
-  margin-right: 10rem;
-}
-.header__information h1 span{
-  color: var(--Turquoise) ;
-}
-
-.nav__buttoms{
-  width: 80%;
-  height: auto;
-  margin: 0 auto 3rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: flex-start;
-}
-.secundary--button{
-  background: rgb(30, 41, 59);
-}
-.secundary--button p {
-  color: #fff;
-} 
-@media (max-width:900px) {
-  .header__information h1{
-    text-align: center;
-  }
-  .text-header{
-    justify-content: center;
-  }
-  .nav__buttoms{
-    justify-content: center;
-  }
-  .header__information h1{
-    margin-right: 0;
-  }
-  .nav__items{
-    display: none;
-  }
-  .change-lenguje{
-    display: none;
-  }
-  .nav__buttoms{
-    width: 100%;
-  }
-  .header__nav{
-    width: 100%;
-  }
-}
-@media (min-width:900px){
- .nav__burger{
-   display: none;
- }
+  border-radius: 9999px;
+  display: inline-block;
+  font-weight: 500;
 }
