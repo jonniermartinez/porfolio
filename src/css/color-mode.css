@@ -18,6 +18,13 @@
     body{
       background: var(--blue);
     }
+    span{
+        color: var(--soft-withe);
+    }
+    .nav__menu{
+      padding: 1rem;
+      background: var(--soft-blue);
+    }
     .primary-button{
       background-color: var(--soft-withe); 
     }
@@ -31,7 +38,7 @@
       color: var(--soft-withe);
     }
     .nav-links:hover{
-      background: rgb(30, 41, 59);
+      background: var(--soft-blue);
     }
     .button:hover{
         box-shadow: var(--soft-blue) 0px 0px 0px 4px, var(--soft-withe) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;

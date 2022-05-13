@@ -72,4 +72,8 @@
     gap: 2rem;
     justify-content: flex-start;
   }
-
+.nav__menu{
+  padding: 1rem;
+  background: var(--soft-withe);
+  border-radius: 50%; 
+}

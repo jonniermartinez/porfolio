@@ -22,6 +22,10 @@ h1, h2, h3, p{
 a{
   text-decoration: none;
 }
+span{
+  color: var(--blue);
+  cursor: pointer;
+}
 /* Variables */
 :root{
   --mirege: #151625;
