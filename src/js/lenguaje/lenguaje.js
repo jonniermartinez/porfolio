@@ -1,0 +1,1 @@
+// https://murodev.blogspot.com/2016/02/multi-idioma-javascript.html
