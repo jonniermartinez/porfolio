@@ -33,7 +33,7 @@
     margin-top: 20px;
   }
   }
-  @media (min-width:900px){
+  @media (min-width:742px){
    .nav__burger{
      display: none;
    }
