@@ -21,10 +21,6 @@
     span{
         color: var(--soft-withe);
     }
-    .nav__menu{
-      padding: 1rem;
-      background: var(--soft-blue);
-    }
     .primary-button{
       background-color: var(--soft-withe); 
     }

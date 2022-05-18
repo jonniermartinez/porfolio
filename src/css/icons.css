@@ -1,0 +1,33 @@
+.change-lenguje,
+.nav__menu{
+    padding: .5rem;
+    border-radius: 50%;
+}
+.change-lenguje:hover,
+.nav__menu:hover{
+    background: var(--soft-withe);
+}
+.change-lenguje svg{
+    width: 2.8rem;
+}
+.change-lenguje svg path{
+    fill: var(--soft-blue);
+}
+.nav__menu svg{
+    width: 2.8rem;
+}
+.nav__menu svg path{
+    fill: var(--soft-blue);
+}
+@media (prefers-color-scheme: dark){
+    .change-lenguje svg path{
+        fill: var(--soft-withe);
+    }
+    .nav__menu svg path{
+        fill: var(--soft-withe);
+    }
+    .change-lenguje:hover,
+    .nav__menu:hover{
+    background: var(--soft-blue);
+    }
+}
