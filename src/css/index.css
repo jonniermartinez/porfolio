@@ -16,6 +16,7 @@ html{
   font-family: 'Inter';
 }
 body{
+  width: 100VW;
   font-family: 'Inter', sans-serif;
   max-width: 110rem;
   margin: 2.5rem auto;
@@ -28,6 +29,55 @@ h1, h2, h3, p{
 }
 a{
   text-decoration: none;
+}
+.floats__circles{
+  position: absolute;
+  top: 0;
+  right: -48vw;
+  left: 0;
+  width: 98vw;
+  height: 100vh;
+  opacity: .5;
+  max-width: 100vw;
+  max-height: 574px;
+  z-index: -1;
+}
+.obj1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(15rem + 50vw) ;
+  height: calc(15rem + 50vw) ;
+  background: radial-gradient(closest-side,#2dd4bea1,rgba(233,168,2,0));
+  animation: traverse-letf 20s cubic-bezier(0.69, 0.01, 0.58, 1) infinite alternate;
+}
+@media (max-width:425px) {
+  .obj1{
+    width: calc(15rem + 12vw) ;
+    height: calc(15rem + 12vw) ;
+  }
+}
+.obj2{
+  background: radial-gradient(closest-side,#6d2dd46b,rgba(233,168,2,0));
+  left: 50%;
+
+  animation: traverse-right 40s cubic-bezier(0.69, 0.01, 0.58, 1) infinite alternate;
+}
+@keyframes traverse-right{
+  0%{
+    transform: translateY(-10vh)  translateX(-40vw) rotate(180deg);
+  }
+  100%{
+    transform:translateY(40vh)  translateX(-50vw) rotate(180deg) ;
+  }
+}
+@keyframes traverse-letf {
+  0%{
+    transform: translateY(50vh)  translateX(-10vw) rotate(180deg);
+  }
+  100%{
+    transform:translateY(-10vh)  translateX(50vw) rotate(180deg) ;
+  }
 }
 /* Variables */
 .nav{
@@ -48,6 +98,11 @@ a{
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+@media (max-width:426px) {
+  .nav__list{
+    display: none;
+  }
 }
 .nav__item{
   padding: .8rem 3rem;
@@ -105,13 +160,14 @@ a{
 .button{
  width: 20rem;
  height: 5.2rem;
+ font-family: 'Inter';
  display: inline-block;
  border-radius: 9999px;
  cursor: pointer;
  display: flex;
  align-items: center;
  justify-content: center;
- font-size: 1.7rem;
+ font-size: 1.8rem;
  font-weight: 500;
 }
 .button:hover{
