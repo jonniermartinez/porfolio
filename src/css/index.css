@@ -33,7 +33,7 @@ h1, h2, h3, p{
 a{
   text-decoration: none;
 }
-.floats__circles{
+.header__circles{
   position: absolute;
   top: 0;
   right: -48vw;
@@ -45,7 +45,7 @@ a{
   max-height: 574px;
   z-index: -1;
 }
-.obj1{
+.circle__one{
   position: absolute;
   top: 0;
   left: 0;
@@ -55,12 +55,12 @@ a{
   animation: traverse-letf 20s cubic-bezier(0.69, 0.01, 0.58, 1) infinite alternate;
 }
 @media (max-width:425px) {
-  .obj1{
+  .circle__one{
     width: calc(15rem + 12vw) ;
     height: calc(15rem + 12vw) ;
   }
 }
-.obj2{
+.circle__one--purple{
   background: radial-gradient(closest-side,#6d2dd46b,rgba(233,168,2,0));
   left: 50%;
 
