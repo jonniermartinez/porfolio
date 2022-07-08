@@ -107,30 +107,33 @@ a{
     display: none;
   }
 }
-.nav__item{
+
+
+.nav__link{
   padding: .8rem 3rem;
-  font-size: 1.8rem;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
   border-radius: 9999px;
 }
-.nav__link{
+.link__text{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
   color: var(--mirege);
   font-weight: 400;
   opacity: .6;
+  border-radius: none;
 }
-.nav__link--active{
+.link__text--active{
   border-bottom: 2px var(--Turquoise) solid;
   color: var(--mirege);
   opacity: 1;
   padding-bottom: 0.25rem;
 }
-.nav__item:hover{
+.nav__link:hover{
   background: rgba(230, 231, 238, 0.726);
 }
+
+
+
 /*icons*/
 .nav__lenguaje-icon{
   padding: .5rem;
@@ -380,8 +383,11 @@ a{
   .secundary--button p{
     color: var(--soft-withe);
   }
-  .nav-links:hover{
+  .nav__item:hover{
     background: var(--soft-blue);
+  }
+  .nav__link{
+    color: var(--soft-withe);
   }
   .button:hover{
       box-shadow: var(--soft-blue) 0px 0px 0px 4px, var(--soft-withe) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
