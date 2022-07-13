@@ -10,17 +10,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter';
 }
 html{
   font-size: 62.5%;
-  font-family: 'Inter';
 }
 ::-webkit-scrollbar {
   display: none;
 }
 body{
   width: 100VW;
-  font-family: 'Inter', sans-serif;
   max-width: 110rem;
   margin: 2.5rem auto;
 }
@@ -166,7 +165,6 @@ a{
 .button{
  width: 20rem;
  height: 5.2rem;
- font-family: 'Inter';
  display: inline-block;
  border-radius: 9999px;
  cursor: pointer;
@@ -218,7 +216,6 @@ a{
   margin: 0 auto;
 }
 .header__information h1{
-  font-family: "Inter";
   display: inline-block;
   text-align:left;
   font-weight: 800;
