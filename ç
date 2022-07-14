@@ -239,7 +239,7 @@ a{
 }
 
 .proyect__card{
-  width : 26rem ;
+  width: 30rem;
   max-width : 30rem;
 }
 .proyects{
@@ -257,7 +257,7 @@ a{
   padding: 3.2rem;
   margin-bottom: 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   justify-items : center ;
   gap: 4rem;
 }
