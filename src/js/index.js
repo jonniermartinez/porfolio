@@ -3,6 +3,15 @@ window.addEventListener('hashchange', navigator, false)
 const container = document.getElementById("root");
 const home = document.getElementById("home");
 
+const PROJECTS = {
+    wordle : {
+        score : [],
+        liveUrl : 'https://wordle-clone-jonnier.netlify.app/',
+        githubUrl : 'https://github.com/jonniermartinez/wordle',
+        img : '../img/words.jpg',
+    },
+}
+
 const PATHS = {
     home : {
         name : "home",
