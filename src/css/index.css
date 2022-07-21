@@ -238,21 +238,21 @@ a{
   justify-content: flex-start;
 }
 
-.proyect__card{
+.project__card{
   width : 26rem ;
   max-width : 30rem;
 }
-.proyects{
+.projects{
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 7rem;
   margin-bottom: 5rem;
 }
-.proyects__title{
+.projects__title{
   font-size: calc(2.3rem + .5vw) ;
   margin-bottom: 4rem;
-  font-weight: 400;
+  font-weight: 600;
 }
-.cards__proyects{
+.cards__projects{
   margin: 0 auto;
   padding: 3.2rem;
   margin-bottom: 4rem;
@@ -292,6 +292,19 @@ a{
 }
 .card__title{
   font-size: 1.8rem;
+}
+
+
+/* Contact Section */ 
+.contact{
+  width: 100%;
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+}
+.contact__title{
+  font-size: calc(2.3rem + .5vw) ;
+  margin-bottom: 4rem;
+  font-weight: 600;
 }
 
 /* @ media desktop */
@@ -350,7 +363,7 @@ a{
   .button p{
     color: hsl(221, 39%, 11%);
   }
-  .nav-links p{
+  .nav__link p{
     color: hsl(0, 0%, 100%);
   }
   body{
@@ -371,7 +384,7 @@ a{
   .secundary--button p{
     color: var(--soft-withe);
   }
-  .nav__item:hover{
+  .nav__link:hover{
     background: var(--soft-blue);
   }
   .nav__link{
