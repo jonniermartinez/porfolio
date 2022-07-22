@@ -4,6 +4,7 @@
   --soft-blue: rgb(30, 41, 59);
   --Turquoise: #33C6BF ;
   --soft-withe: rgb(229, 231, 235);
+  --withe: rgb(255, 255, 255);
 }
 /* Estilos generales */
 *{
@@ -35,6 +36,47 @@ a{
 #root{
   margin : 0 2rem 0 2rem;
 }
+.icon{
+  width: 2.7rem;
+}
+.icon__svg{
+  width: 2.7rem;
+}
+.icon__path{
+  fill: var(--mirege);
+}
+.button{
+  width: 20rem;
+  height: 5.2rem;
+  display: inline-block;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+ }
+ .button:hover{
+   box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--blue) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+ .primary-button{
+   background-color: var(--soft-blue);
+ }
+ .primary-button p{
+   color: var(--soft-withe);
+ }
+ .secundary--button{
+   background-color: var(--soft-withe);
+ }
+ .secundary--button p{
+   color: var(--soft-blue);
+ } 
+ .secundary--button:hover{
+   box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--mirege) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+
+
 .header__circles{
   position: absolute;
   top: 0;
@@ -104,11 +146,7 @@ a{
   align-items: center;
   justify-content: space-around;
 }
-@media (max-width:426px) {
-  .nav__list{
-    display: none;
-  }
-}
+
 
 
 .nav__link{
@@ -134,9 +172,6 @@ a{
   background: rgba(230, 231, 238, 0.726);
 }
 
-
-
-/*icons*/
 .nav__lenguaje-icon{
   padding: .5rem;
   border-radius: 50%;
@@ -164,37 +199,6 @@ a{
 .display-none{
   display: none;
 }
-
-.button{
- width: 20rem;
- height: 5.2rem;
- display: inline-block;
- border-radius: 9999px;
- cursor: pointer;
- display: flex;
- align-items: center;
- justify-content: center;
- font-size: 1.8rem;
- font-weight: 500;
-}
-.button:hover{
-  box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--blue) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
- }
-.primary-button{
-  background-color: var(--soft-blue);
-}
-.primary-button p{
-  color: var(--soft-withe);
-}
-.secundary--button{
-  background-color: var(--soft-withe);
-}
-.secundary--button p{
-  color: var(--soft-blue);
-} 
-.secundary--button:hover{
-  box-shadow: var(--soft-withe) 0px 0px 0px 4px, var(--mirege) 0px 0px 0px 7px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
- }
 
 .text-header{
   margin: 0 auto 3rem auto;
@@ -299,15 +303,75 @@ a{
 .contact{
   width: 100%;
   margin-top: 7rem;
-  margin-bottom: 5rem;
 }
 .contact__title{
   font-size: calc(2.3rem + .5vw) ;
-  margin-bottom: 4rem;
+  margin-bottom: 0 ;
   font-weight: 600;
 }
 
-/* @ media desktop */
+/*Form*/
+.contact__information-section{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  flex-direction: row-reverse;
+}
+.form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.form__title{
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--soft-withe);
+  text-align: center;
+}
+.form__label{
+  font-size: 1.5rem;
+  margin-bottom: .6rem;
+}
+.form__input{
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  width: 60%;
+  height: 3rem;
+  margin-bottom: 2rem;
+  background: var(--soft-withe);
+  border: 1px solid var(--mirage);
+  border-radius: 1rem;
+}
+.form__textarea{
+  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  background: var(--soft-withe);
+  border: 1px solid var(--mirage);
+  border-radius: 1rem;
+}
+.information__container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.information__image{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  text-align: center;
+  object-fit: cover;
+}
+.social__networks{
+  width: 17rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* @ media */
 
 @media (max-width:1020px) {
   .header__information h1{
@@ -335,6 +399,14 @@ a{
     width: 100%;
   }
 }
+@media (max-width:768px) {
+  .form__container{
+    width: 100%;
+  }
+  .form{
+    width: 100%;
+  }
+}
 @media (max-width:445px){
   .header__information h1 {
     font-size: calc(3rem + 1vw);
@@ -343,19 +415,11 @@ a{
 .header__information {
   margin-top: 20px;
 }
-}
-/*
-@media (min-width:px){
- .nav__burger{
-   display: none;
- }
- .nav__menu{
+.nav__list{
   display: none;
 }
-} 
-*/
-
-/* Color mode */
+}
+/* @Colormode */
 @media (prefers-color-scheme: dark) {
   h1, h2, h3, p{
     color: hsl(0, 0%, 100%);
@@ -368,6 +432,9 @@ a{
   }
   body{
     background: var(--blue);
+  }
+  label{
+    color: var(--soft-withe);
   }
   span{
       color: var(--soft-withe);
@@ -408,7 +475,10 @@ a{
 background: var(--soft-blue);
 }
 .github__logo path {
-  fill: white;
+  fill: var(--withe);
+}
+.icon__path{
+  fill: var(--soft-withe);
 }
 }
 

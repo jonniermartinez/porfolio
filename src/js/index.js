@@ -181,9 +181,8 @@ const PATHS = {
 }
 
 
-function navigator() {
-  
 
+function navigator() {
   if (location.hash.startsWith('#home')){
       contactLink.classList.remove("link__text--active")
       homeLink.classList.add("link__text--active")
@@ -204,5 +203,6 @@ function navigator() {
   }
 
 }
+
 
 
