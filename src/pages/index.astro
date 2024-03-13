@@ -1,0 +1,111 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "@/layouts/Layout.astro";
+import SocialLinks from "@/components/SocialLinks.astro";
+import PostCard from "@/components/PostCard.astro";
+import Link from "@/components/shared/Link.astro";
+import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
+import AboutMe from "@/components/AboutMe.astro"
+import presentation from "@/data/presentation";
+import Projects from "@/components/Projects.astro";
+import ProjectsCard from "@/components/ProjectsCard.astro"
+
+import { PROJECTS_DATA } from "@/components/Projects.astro";
+
+const posts = (await getCollection("posts")).sort(function (first, second) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
+---
+
+<Layout>
+  <main class="flex flex-col gap-20">
+    <article
+      class="flex flex-col gap-8 justify-between md:flex-row-reverse md:justify-end md:gap-12"
+    >
+      {
+        presentation.profile && (
+          <img
+            src={presentation.profile}
+            class="w-1/4 self-center rounded-full"
+          />
+        )
+      }
+
+      <div class="flex flex-col gap-8">
+        <h1 class="text-4xl text-neutral-100 font-bold">
+          {presentation.title}
+        </h1>
+
+        <p
+          class="w-auto max-w-[40ch] text-slate-200"
+          set:html={convertAsteriskToStrongTag(presentation.description)}
+        />
+
+        <SocialLinks />
+      </div>
+    </article>
+ 
+
+    <article class="flex flex-col gap-8">
+      <header class="flex w-full flex-row justify-between gap-2">
+        <h2 class=" flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+          Latest posts</h2>
+        <Link href="/posts" label="See all posts" isUnderline target="_self" />
+      </header>
+      {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
+
+      <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+        {
+          posts.length !== 0 &&
+            posts
+              .slice(0, 2)
+              .map((post) => (
+                <PostCard
+                  publishedAt={post.data.publishedAt}
+                  title={post.data.title}
+                  description={post.data.description}
+                  slug={post.slug}
+                />
+              ))
+        }
+      </section>
+    </article>
+
+    <article class="flex flex-col gap-8">
+      <header class="flex w-full flex-row justify-between gap-2">
+        <h2 class=" flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+          Latest Side projects 
+        </h2>
+      </header>
+        {
+          PROJECTS_DATA
+          .slice(0, 2)
+              .map((post) => (
+                <>
+                <ProjectsCard
+    
+    image={post.image} title={post.title} description={post.description} tags={post.tags} link={post.link} github={post.github} 
+    ></ProjectsCard>
+                </>
+              ))
+
+        }
+    </article>
+
+    <article>
+      <h2 class=" flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white">
+        About me
+      </h2>
+      <AboutMe />
+    </article>
+
+    <article class="flex flex-col gap-8">
+      <header class="flex w-full flex-row justify-between gap-2">
+        <h3 class="text-lg text-neutral-100">Get in touch</h3>
+      </header>
+
+      <SocialLinks />
+    </article>
+  </main>
+</Layout>
