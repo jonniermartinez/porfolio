@@ -8,7 +8,7 @@ import Link from "@/components/shared/Link.astro";
 import convertAsteriskToStrongTag from "@/utils/convertAsteriskToStrongTag";
 import AboutMe from "@/components/AboutMe.astro"
 import presentation from "@/data/presentation";
-import Projects from "@/components/Projects.astro";
+import Fotter from "@/components/Fotter.astro";
 import ProjectsCard from "@/components/ProjectsCard.astro"
 
 import { PROJECTS_DATA } from "@/components/Projects.astro";
@@ -100,12 +100,6 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
       <AboutMe />
     </article>
 
-    <article class="flex flex-col gap-8">
-      <header class="flex w-full flex-row justify-between gap-2">
-        <h3 class="text-lg text-neutral-100">Get in touch</h3>
-      </header>
-
-      <SocialLinks />
-    </article>
+    <Fotter />
   </main>
 </Layout>

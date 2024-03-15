@@ -1,9 +1,6 @@
 ---
-import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
 import type { Tags, ProjectProps } from "./ProjectsCard.astro"
 
 import ProjectsCard from "./ProjectsCard.astro"
@@ -21,36 +18,11 @@ export const TAGS: Tags = {
 }
 export const PROJECTS_DATA: Array<ProjectProps> = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Citify - A free Citation Generator",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+      "Academic citation generator. +5 supported citation styles. +200 citations created. is available in english and spanish. Built from scratch with Next.js, React and Tailwind CSS",
+    link: "https://citify-jonniermartinez.vercel.app/en",
+    image: "/projects/citify.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
@@ -68,4 +40,16 @@ export const PROJECTS_DATA: Array<ProjectProps> = [
   }
 </div>
 
+<!-- 
+
+   {
+    title: "SVGL - A beautiful library with SVG logos",
+    description:
+      "Biblioteca des logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://citify-jonniermartinez.vercel.app/en",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/svgl.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+ -->
 
