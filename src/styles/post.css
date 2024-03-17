@@ -1,5 +1,5 @@
 .post p {
-  @apply leading-7;
+  @apply leading-8 mb-5 text-slate-100/75;
 }
 
 .post code {
@@ -11,7 +11,7 @@
 }
 
 .post img {
-  @apply mx-auto rounded-sm;
+  @apply  mx-auto rounded-sm;
 }
 
 .post h3 {
@@ -40,7 +40,9 @@
 .post pre {
   @apply p-4;
 }
-
+.post .line {
+  @apply flex flex-wrap;
+}
 .post pre > code {
   @apply bg-transparent;
 }

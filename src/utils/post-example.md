@@ -2,13 +2,15 @@
 title: "Supervised Machine Learning: Empowering Decision"
 publishedAt: 2023-08-14
 description: "Making in the Digital Age"
-slug: "empowering-decision"
+slug: "example"
 isPublish: true
 ---
 
 Supervised machine learning, a pivotal branch of artificial intelligence, thrives on labeled data, where each data point is already paired with its correct outcome. This strategic approach empowers machine learning models to accurately predict outcomes for new, unseen data. The utilization of supervised ML spans across an array of critical applications, exemplified by:
 
+
 ![alt text](https://fotografiamejorparavendermas.com/wp-content/uploads/2017/06/La-importancia-de-la-imagen.jpg)
+
 
 1. <font color="white">Credit Scoring:</font> By employing supervised ML models, lenders can proactively assess the risk of default for borrowers, enabling them to make more informed and calculated lending decisions.
 
@@ -20,7 +22,10 @@ Supervised machine learning, a pivotal branch of artificial intelligence, thrive
 
 5. <font color="white">Risk Management:</font> Supervised ML models facilitate comprehensive risk assessment, empowering businesses to make well-informed choices concerning investments and operational strategies.
 
-<blockquote class="twitter-tweet " data-media-max-width="560"><p lang="en" dir="ltr">Have good commits message is crucial to the communication and organization in a project.<br><br>This is an repository with conventional commits Message with emoji. 🧵 <a href="https://t.co/0MsTUMhi9S">pic.twitter.com/0MsTUMhi9S</a></p>&mdash; Jonnier Martinez (@jonniermartinez) <a href="https://twitter.com/jonniermartinez/status/1761882332657504377?ref_src=twsrc%5Etfw">February 25, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class=" md:w-full w-24">
+<blockquote class="twitter-tweet " ><p lang="en" dir="ltr">Have good commits message is crucial to the communication and organization in a project.<br><br>This is an repository with conventional commits Message with emoji. 🧵 <a href="https://t.co/0MsTUMhi9S">pic.twitter.com/0MsTUMhi9S</a></p>&mdash; Jonnier Martinez (@jonniermartinez) <a href="https://twitter.com/jonniermartinez/status/1761882332657504377?ref_src=twsrc%5Etfw">February 25, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
 
 The prominence of supervised ML is escalating, mirroring the exponential growth of data accessible to businesses. With this expanding dataset, supervised ML models can be meticulously trained, enhancing their predictive accuracy. Consequently, supervised ML emerges as a paramount tool for robust decision-making across a diverse spectrum of industries.
 
