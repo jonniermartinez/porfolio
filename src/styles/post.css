@@ -1,9 +1,9 @@
 .post p {
-  @apply leading-8 mb-5 text-slate-100/75;
+  @apply leading-8 text-slate-100/75;
 }
 
 .post code {
-  @apply  bg-neutral-800 px-1 py-[2px] text-orange-500 rounded-xl;
+  @apply bg-neutral-800 px-1 py-[2px] text-orange-500 rounded-xl;
 }
 
 .post h2 {
@@ -11,7 +11,7 @@
 }
 
 .post img {
-  @apply  mx-auto rounded-sm;
+  @apply mx-auto rounded-sm;
 }
 
 .post h3 {
@@ -21,8 +21,9 @@
 .post .twitter-tweet {
   @apply mx-auto;
 }
+
 .post code {
-  @apply bg-neutral-800 px-1 py-[2px] text-red-500  rounded-xl;
+  @apply bg-neutral-800 px-1 py-[2px] text-red-500 rounded-xl;
 }
 
 .post a {
@@ -38,11 +39,13 @@
 }
 
 .post pre {
-  @apply p-4;
+  @apply p-4 w-80 md:w-full;
 }
+
 .post .line {
   @apply flex flex-wrap;
 }
-.post pre > code {
+
+.post pre>code {
   @apply bg-transparent;
 }

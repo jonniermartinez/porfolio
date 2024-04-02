@@ -189,9 +189,16 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"01-supervised-machine-learning-empowering-decision.md": {
-	id: "01-supervised-machine-learning-empowering-decision.md";
+"01-welcome.md": {
+	id: "01-welcome.md";
   slug: "empowering-decision";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"02-update-status-zoho-recruit.md": {
+	id: "02-update-status-zoho-recruit.md";
+  slug: "zoho-recruit-update-record-status";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">

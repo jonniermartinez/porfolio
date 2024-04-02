@@ -1,7 +1,7 @@
 ---
 title: "Hello World! 👋: An Introduction to my Journey in Software Engineering. 💻🚀"
 publishedAt: 2024-03-15
-description: "Making in the Digital Age"
+description: "This post is about me and what is my goal with this blog"
 slug: "empowering-decision"
 isPublish: true
 ---
