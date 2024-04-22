@@ -1,9 +1,9 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import type { Tags, ProjectProps } from "./ProjectsCard.astro"
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import type { Tags, ProjectProps } from "./ProjectsCard.astro";
 
-import ProjectsCard from "./ProjectsCard.astro"
+import ProjectsCard from "./ProjectsCard.astro";
 export const TAGS: Tags = {
   NEXT: {
     name: "Next.js",
@@ -15,7 +15,7 @@ export const TAGS: Tags = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
-}
+};
 export const PROJECTS_DATA: Array<ProjectProps> = [
   {
     title: "Citify - A free Citation Generator",
@@ -25,17 +25,20 @@ export const PROJECTS_DATA: Array<ProjectProps> = [
     image: "/projects/citify.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS_DATA.map(({ image, title, description, tags, link, github }) => (
-    <ProjectsCard
-    
-    image={image} title={title} description={description} tags={tags} link={link} github={github} 
-    ></ProjectsCard>
-
+      <ProjectsCard
+        image={image}
+        title={title}
+        description={description}
+        tags={tags}
+        link={link}
+        github={github}
+      />
     ))
   }
 </div>
@@ -52,4 +55,3 @@ export const PROJECTS_DATA: Array<ProjectProps> = [
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
  -->
-
