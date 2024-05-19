@@ -1,13 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 // Supports weights 100-900
-import '@fontsource-variable/onest';
+import "@fontsource-variable/onest";
 import SEOTags from "@/components/seo/SEOTags.astro";
 
 import "@fontsource/open-sans";
 import "@/styles/tailwind.css";
 import "@/styles/post.css";
-
 
 export interface Props {
   title?: string;
@@ -17,25 +16,30 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <SEOTags title={title} />
 
   <body
-    class="mx-auto md:px-16 px-3 flex min-h-screen max-w-[872px] flex-col gap-9 font-normal text-base text-slate-50 py-8 md:gap-20 md:py-16 bg-slate-950 "
+    class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-slate-950 px-3 py-8 text-base font-normal text-slate-50 md:gap-20 md:px-16 md:py-16"
   >
- <div class=" z-[-10] absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+    <div
+      class="absolute bottom-0 left-0 right-0 top-0 z-[-10] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+    >
+    </div>
+    <Header />
 
-
- </div>
- <Header />
-
- <slot />
+    <slot />
     <style is:global>
-
-      body{ 
-        font-family: 'Onest Variable', sans-serif;
-
+      body {
+        font-family: "Onest Variable", sans-serif;
       }
     </style>
+
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "d0697b8264414954a291cd912280a93a"}'
+    ></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
