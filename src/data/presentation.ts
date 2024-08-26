@@ -26,11 +26,11 @@ const presentation: Presentation = {
       link: "https://www.linkedin.com/in/jonniermartinez/",
       icon: "./Icons/LinkedIn.svg"
     },
-    {
-      label: "Twitter",
-      link: "https://twitter.com/jonniermartinez",
-      icon: "./Icons/x.svg"
-    },
+    // {
+    //   label: "Twitter",
+    //   link: "https://twitter.com/jonniermartinez",
+    //   icon: "./Icons/x.svg"
+    // },
     {
       label: "Github",
       link: "https://github.com/jonniermartinez",
