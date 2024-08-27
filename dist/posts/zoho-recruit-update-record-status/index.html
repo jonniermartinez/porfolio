@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>How to update the record's status via API in Zoho recruit with Delug Script? 📝</title>
+
+<meta charset="UTF-8">
+
+<link rel="canonical" href="http://localhost:3000/posts/zoho-recruit-update-record-status/">
+
+<meta name="description" content="My portfolio website showcases my diverse range of creative projects and professional accomplishments, demonstrating my passion and expertise in various fields.">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Jonnier Martinez - Porfolio - Desarrollador de Software con enfoque en aplicaciones web y mobiles">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/opengraph-image.png">
+<meta property="og:url" content="http://localhost:3000/posts/zoho-recruit-update-record-status/">
+
+<meta property="og:image:url" content="/opengraph-image.png">
+
+
+
+<meta property="og:image:height">
+<meta property="og:image:alt" content="portfolio image">
+
+
+<link rel="icon" href="/favicon.svg"><link rel="sitemap" href="/sitemap-index.xml">
+<meta content="width=device-width, initial-scale=1" name="viewport"><meta content="Astro v2.5.5" name="generator">
+<link rel="stylesheet" href="/_astro/index.8a2f8edb.css" /></head>
+
+  <body class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-slate-950 px-3 py-8 text-base font-normal text-slate-50 md:gap-20 md:px-16 md:py-16">
+    <div class="absolute bottom-0 left-0 right-0 top-0 z-[-10] bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+    </div>
+    <header class="z-40  flex w-full flex-col gap-2 md:flex-row md:justify-between">
+
+  <nav role="navigation">
+    <ul role="list" class="flex flex-row gap-3">
+      <li>
+        <a href="/" class="hover:text-neutral-100">Home</a>
+      </li>
+      <!-- <li>
+        <a
+          href="/work"
+          class:list={{
+            ["hover:text-neutral-100"]: true,
+            ["text-neutral-100 font-bold"]: pathname === "/work",
+          }}>Work</a
+        >
+      </li> -->
+      <li>
+        <a href="/posts" class="hover:text-neutral-100">Posts</a>
+      </li>
+      <li>
+        <a href="/projects" class="hover:text-neutral-100">Side projects</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+    
+  <main class="post mx-auto flex flex-col gap-6">
+    <header role="presentation">
+      <h1 class="text-md mb-4 text-3xl font-bold">
+        How to update the record&#39;s status via API in Zoho recruit with Delug Script? 📝
+      </h1>
+      <div class="flex justify-between opacity-70">
+        <p>21/03/2024</p>
+      </div>
+    </header>
+
+    <p>To update a record in Zoho Recruit, we need to target specific endpoints. Using the PUT method in the endpoint <a href="https://recruit.zoho.com/recruit/v2/%7Bmodule_api_name%7D">https://recruit.zoho.com/recruit/v2/{module_api_name}</a> is effective only if the record is not blocked. However, if you intend to change the status of a blocked record, you must utilize the following endpoint: <a href="https://recruit.zoho.com/recruit/v2/Candidates/status">https://recruit.zoho.com/recruit/v2/Candidates/status</a>. This endpoint is exclusively available for modules such as candidate, job opening, and offer.</p>
+<p>This is the <a href="https://www.zoho.com/recruit/developer-guide/apiv2/change-status.html">officcial documentantion</a> to how to do this operation and the scope that you need to do this oparation.</p>
+<p>Let’s delve into the code:</p>
+<pre is:raw="" class="astro-code nord" style="background-color: #2e3440ff; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">JobOpeningId </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">731279000000808258</span><span style="color: #ECEFF4">"</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #D8DEE9FF">CandadidateId </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">731279000000791031</span><span style="color: #ECEFF4">"</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #D8DEE9FF">inputData </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">{</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">data</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">: [{</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">ids</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">:[</span><span style="color: #ECEFF4">"</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> CandadidateId </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">],</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">jobids</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">:[</span><span style="color: #ECEFF4">"</span><span style="color: #D8DEE9FF"> </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> JobOpeningId </span><span style="color: #81A1C1">+</span><span style="color: #D8DEE9FF"> </span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">],   </span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">Candidate_Status</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">:</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">No preseleccionado</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">,</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">comments</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">:</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">test</span><span style="color: #EBCB8B">\"</span><span style="color: #A3BE8C">}]}</span><span style="color: #ECEFF4">"</span><span style="color: #81A1C1">;</span></span>
+<span class="line"></span></code></pre>
+<pre is:raw="" class="astro-code nord" style="background-color: #2e3440ff; overflow-x: auto;" tabindex="0"><code><span class="line"><span style="color: #D8DEE9FF">response </span><span style="color: #81A1C1">=</span><span style="color: #D8DEE9FF"> invokeurl</span></span>
+<span class="line"><span style="color: #ECEFF4">[</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	url </span><span style="color: #81A1C1">:</span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">https://recruit.zoho.com/recruit/v2/Candidates/status</span><span style="color: #ECEFF4">"</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	type </span><span style="color: #81A1C1">:</span><span style="color: #8FBCBB">PUT</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	parameters</span><span style="color: #81A1C1">:</span><span style="color: #D8DEE9FF">inputData</span></span>
+<span class="line"><span style="color: #D8DEE9FF">	connection</span><span style="color: #81A1C1">:</span><span style="color: #ECEFF4">"</span><span style="color: #A3BE8C">recruit</span><span style="color: #ECEFF4">"</span></span>
+<span class="line"><span style="color: #ECEFF4">]</span><span style="color: #81A1C1">;</span></span>
+<span class="line"><span style="color: #D8DEE9FF">info response</span><span style="color: #81A1C1">;</span></span></code></pre>
+<p>Feel free to explore and adapt this code for your specific use case. For further details, please refer to the Zoho Recruit API documentation.</p>
+<p>Happy coding! 🚀</p>
+  </main>
+
+    
+
+    <!-- Cloudflare Web Analytics -->
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;d0697b8264414954a291cd912280a93a&quot;}"></script><!-- End Cloudflare Web Analytics -->
+  </body></html>
