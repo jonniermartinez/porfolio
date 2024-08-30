@@ -1,39 +1,50 @@
 ---
- const personalImageAlt = "Miguel Ángel"
- import presentation from "@/data/presentation";
- 
+const personalImageAlt = "Jonnier Martinez";
+import presentation from "@/data/presentation";
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row">
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row"
+>
   <div
-    class="[&>p]:mb-4 [&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    class="text-pretty order-2 md:order-1 [&>p>strong]:font-mono [&>p>strong]:font-normal [&>p>strong]:text-yellow-100 [&>p]:mb-4"
   >
     <p>
-      Hi! I'm Jonnier Martinez, originally from Cali, Colombia 🇨🇴. 
-      I graduated with an Associate Degree in software analysis and development, 
+      Hi! I'm Jonnier Martinez, originally from Cali, Colombia 🇨🇴. I graduated
+      with an Associate Degree in software analysis and development,
       specializing in <strong>frontend development applications</strong>.
-
     </p>
 
     <p>
-      I often attend events as an active member of the <strong>GDG Cali 
-        community</strong>  and also actively participate in the <strong>indie creators community</strong>. 
-      These spaces allow me to connect with other professionals, learn, and share experiences.
-
+      I often attend events as an active member of the <strong
+        >GDG Cali community</strong
+      > and also actively participate in the <strong
+        >indie creators community</strong
+      >. These spaces allow me to connect with other professionals, learn, and
+      share experiences.
     </p>
 
     <p>
-      One of my standout projects is <strong>Citify</strong>: an academic citation generator that supports over 5 citation styles and has generated over 200 citations so far. It's available in both English and Spanish and was built from scratch using technologies like Next.js, React, and Tailwind CSS.
-
+      One of my standout projects is <strong>Citify</strong>: an academic
+      citation generator that supports over 5 citation styles and has generated
+      over 200 citations so far. It's available in both English and Spanish and
+      was built from scratch using technologies like Next.js, React, and
+      Tailwind CSS.
     </p>
     <p>
-      I'm always seeking new opportunities to learn and grow in the field of software development. Feel free to check out Citify and leave me your feedback!
-
+      I'm always seeking new opportunities to learn and grow in the field of
+      software development. Feel free to check out Citify and leave me your
+      feedback!
     </p>
   </div>
-  <img width="200" height="200" src={presentation.profile} alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20 " style="object-position: 50% 50%">
-
-  
+  <img
+    width="200"
+    height="200"
+    src={presentation.profile}
+    alt={personalImageAlt}
+    class="order-1 aspect-square h-full w-64 rotate-3 rounded-2xl bg-black/20 object-cover p-1 ring-1 ring-black/70 dark:bg-yellow-500/5 dark:ring-white/20 md:order-2 lg:w-64 lg:p-2"
+    style="object-position: 50% 50%"
+  />
 </article>
 
 <!-- FRASES PROHIBIDAS EN VUESTRO PORTFOLIO

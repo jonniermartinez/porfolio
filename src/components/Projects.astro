@@ -1,6 +1,7 @@
 ---
 import NextJS from "./icons/NextJS.astro";
 import Tailwind from "./icons/Tailwind.astro";
+import Angular from "./icons/Angular.astro";
 import type { Tags, ProjectProps } from "./ProjectsCard.astro";
 
 import ProjectsCard from "./ProjectsCard.astro";
@@ -15,6 +16,11 @@ export const TAGS: Tags = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#ca1f75] ",
+    icon: Angular,
+  },
 };
 export const PROJECTS_DATA: Array<ProjectProps> = [
   {
@@ -22,8 +28,18 @@ export const PROJECTS_DATA: Array<ProjectProps> = [
     description:
       "Academic citation generator. +5 supported citation styles. +200 citations created. is available in english and spanish. Built from scratch with Next.js, React and Tailwind CSS",
     link: "https://citify-jonniermartinez.vercel.app/en",
+    github: "https://github.com/jonniermartinez/citify",
     image: "/projects/citify.png",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+  {
+    title: "Dictionary App",
+    description:
+      "Dictionary Search Tool: +Word pronunciation included. +Customizable font and theme. Built from scratch with Angular and Tailwind CSS. Open source and available",
+    link: "https://jonnier-dictionary.netlify.app/",
+    github: "https://github.com/jonniermartinez/Angular-Dictionary",
+    image: "https://jonnier.com/493shots_so.png",
+    tags: [TAGS.ANGULAR, TAGS.TAILWIND],
   },
 ];
 ---
@@ -44,7 +60,6 @@ export const PROJECTS_DATA: Array<ProjectProps> = [
 </div>
 
 <!-- 
-
    {
     title: "SVGL - A beautiful library with SVG logos",
     description:
