@@ -19,17 +19,17 @@ const presentation: Presentation = {
   title: "Hi, I’m Jonnier Martinez 👋",
   profile: "https://imagenes.jonnier.com/Jhonnier.jpg",
   description:
-    "+1 year experience. I'm all about <strong>crafting tech solutions </strong> from Cali, Colombia 🇨🇴. I'm currently working at <a href='https://velaio.com/' target='_blank' class='bg-blue-500 hover:bg-blue-800 p-1 rounded-md font-bold'>VELAIO</a> as a Zoho solutions analyst expert.",
+    "+3 year experience. I'm all about <strong>crafting tech solutions </strong> from Palmira, Colombia 🇨🇴. I'm currently building <a href='https://gurwi.com/' target='_blank' class='bg-orange-500 hover:bg-orange-800 p-1 rounded-md font-bold'>GURWI</a>. ",
   socials: [
-    {
-      label: "Linkedin",
-      link: "https://www.linkedin.com/in/jonniermartinez/",
-      icon: "./Icons/LinkedIn.svg"
-    },
     {
       label: "Github",
       link: "https://github.com/jonniermartinez",
       icon: "./Icons/github.svg"
+    },
+    {
+      label: "Instagram",
+      link: "https://www.instagram.com/jonnier.ig/",
+      icon: "./Icons/IG.svg"
     },
   ],
 };
