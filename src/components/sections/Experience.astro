@@ -1,0 +1,25 @@
+---
+import ExperienceItem from "@/components/ExperienceItem.astro";
+import { experience } from "@/data/cv";
+---
+
+<article class="flex flex-col gap-8">
+  <header class="flex w-full flex-row justify-between gap-2">
+    <h2 class="text-xl font-bold text-neutral-100 uppercase tracking-widest border-b border-neutral-800 pb-4">
+      Experience
+    </h2>
+  </header>
+  <div class="flex flex-col gap-4">
+    {
+      experience.map((job) => (
+        <ExperienceItem
+          title={job.title}
+          company={job.company}
+          description={job.description}
+          date={job.date}
+        />
+      ))
+    }
+  </div>
+</article>
+

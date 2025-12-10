@@ -1,10 +1,4 @@
-
-
-type Social = {
-  label: string;
-  link: string;
-  icon: string;
-};
+import type { Social } from "./presentation";
 
 type Presentation = {
   mail: string;
@@ -16,22 +10,23 @@ type Presentation = {
 
 const presentation: Presentation = {
   mail: "",
-  title: "Hi, I’m Jonnier Martinez 👋",
-  profile: "https://imagenes.jonnier.com/Jhonnier.jpg",
+  title: "Jonnier Martinez",
+  profile: "/me.jpg",
   description:
-    "+3 year experience. I'm all about <strong>crafting tech solutions </strong> from Colombia 🇨🇴. I'm currently building <a href='https://gurwi.com/' target='_blank' class='bg-orange-500 hover:bg-orange-800 p-1 rounded-md font-bold'>GURWI</a>. ",
+    "Full Stack Software Developer experienced in designing and implementing scalable web applications, microservices, and business process automation. Passionate about Clean Architecture, SOLID principles, and building impactful products.",
   socials: [
     {
       label: "Github",
       link: "https://github.com/jonniermartinez",
-      icon: "./Icons/github.svg"
+      icon: "/Icons/github.svg",
     },
     {
-      label: "Instagram",
-      link: "https://www.instagram.com/jonnier.ig/",
-      icon: "./Icons/IG.svg"
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/jonniermartinez/",
+      icon: "/Icons/LinkedIn.svg",
     },
   ],
 };
 
 export default presentation;
+export type { Social };

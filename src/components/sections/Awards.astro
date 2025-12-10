@@ -1,0 +1,26 @@
+---
+import ExperienceItem from "@/components/ExperienceItem.astro";
+import { awards } from "@/data/cv";
+---
+
+<article class="flex flex-col gap-8">
+  <header class="flex w-full flex-row justify-between gap-2">
+    <h2 class="text-xl font-bold text-neutral-100 uppercase tracking-widest border-b border-neutral-800 pb-4">
+      Awards & Recognition
+    </h2>
+  </header>
+  <div class="flex flex-col gap-4">
+    {
+      awards.map((award) => (
+        <ExperienceItem
+          title={award.award}
+          company={award.title}
+          description={award.description}
+          link={award.link}
+          date={award.date}
+        />
+      ))
+    }
+  </div>
+</article>
+

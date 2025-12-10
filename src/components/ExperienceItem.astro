@@ -1,56 +1,58 @@
 ---
-import LinkInline from "./LinkInline.astro"
-
 interface Props {
   title: string
   company: string
-  description: string
+  description: string | string[]
   link?: string
-  date: string
+  date?: string
+  tags?: string[]
 }
 
-const { title, company, description, link, date } = Astro.props
+const { title, company, description, link, date, tags } = Astro.props
 ---
 
-<div
-  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
->
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
-      <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl w-2 h-2s"
-        >&bull;</span
-      >
-
-      <h3 class=" text-lg font-bold text-yellow-400">{title}</h3>
-      <h4 class="font-semibold text-white">{company}</h4>
-      <time class="p-0 m-0 text-sm text-white/80">{date}</time>
+<div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 hover:bg-neutral-800/30 p-4 -mx-4 rounded-lg">
+  {date && (
+    <header class="mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label={date}>
+      {date}
+    </header>
+  )}
+  
+  <div class={`z-10 ${date ? "sm:col-span-6" : "sm:col-span-8"}`}>
+    <h3 class="font-medium leading-snug text-slate-200">
+      <div>
+        <a class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-yellow-400 focus-visible:text-yellow-400 group/link text-base" href={link} target={link ? "_blank" : "_self"} aria-label={title}>
+          <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
+          <span>
+            {title} <span class="inline-block text-slate-500">·</span> <span class="inline-block text-slate-400">{company}</span>
+            {link && (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 focus-visible/link:-translate-y-1 focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+            )}
+          </span>
+        </a>
+      </div>
+    </h3>
+    
+    <div class="mt-2 text-sm leading-normal text-slate-400">
+      {Array.isArray(description) ? (
+        <ul class="list-disc pl-4 space-y-2 marker:text-yellow-400/50">
+          {description.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      ) : (
+        <p>{description}</p>
+      )}
     </div>
-  </div>
-  <div class="relative flex flex-col gap-2 pb-4  text-gray-300 md:col-span-3">
-    {description}
-    {
-      link && (
-        <LinkInline href={link}>
-          Saber más{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </>
-          </svg>
-        </LinkInline>
-      )
-    }
+
+    {tags && tags.length > 0 && (
+      <ul class="mt-2 flex flex-wrap gap-2" aria-label="Technologies used">
+        {tags.map((tag) => (
+          <li class="rounded-full bg-yellow-400/10 px-3 py-1 text-xs font-medium leading-5 text-yellow-300">
+            {tag}
+          </li>
+        ))}
+      </ul>
+    )}
   </div>
 </div>
