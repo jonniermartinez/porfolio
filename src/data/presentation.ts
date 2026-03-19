@@ -1,32 +1,14 @@
-import type { Social } from "./presentation";
-
 type Presentation = {
   mail: string;
   title: string;
   description: string;
-  socials: Social[];
-  profile: string;
 };
 
 const presentation: Presentation = {
-  mail: "",
+  mail: "[EMAIL_ADDRESS]",
   title: "Jonnier Martinez",
-  profile: "/me.jpg",
   description:
-    "Full Stack Software Developer experienced in designing and implementing scalable web applications, microservices, and business process automation. Passionate about Clean Architecture, SOLID principles, and building impactful products.",
-  socials: [
-    {
-      label: "Github",
-      link: "https://github.com/jonniermartinez",
-      icon: "/Icons/github.svg",
-    },
-    {
-      label: "LinkedIn",
-      link: "https://www.linkedin.com/in/jonniermartinez/",
-      icon: "/Icons/LinkedIn.svg",
-    },
-  ],
+    'Hi, I\'m Jonnier — I\'m building <a href="https://gurwi.com" target="_blank" class="text-yellow-400 hover:text-yellow-300 underline transition-colors">Gurwi</a> and <a href="https://clatri.com" target="_blank" class="text-yellow-400 hover:text-yellow-300 underline transition-colors">Clatri</a>, two apps that together have reached over *35,000 users*. I specialize in turning ideas into real, scalable products that people actually use.',
 };
 
 export default presentation;
-export type { Social };

@@ -1,7 +1,11 @@
 ---
-import SocialLinks from "./SocialLinks.astro";
-
+import presentation from "@/data/presentation";
 ---
-<article class="flex flex-col gap-8">
-    <SocialLinks />
-  </article>
+<article class="flex flex-col items-center gap-4 py-8 border-t border-neutral-800">
+  <a
+    href={`mailto:${presentation.mail}`}
+    class="text-sm text-neutral-400 hover:text-white transition-colors"
+  >
+    {presentation.mail}
+  </a>
+</article>

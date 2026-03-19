@@ -36,7 +36,6 @@ export const projects = [
       "Implemented AI agents with Flask and OpenAI SDK, applying design patterns such as Factory and Strategy.",
       "Containerization with Docker and service orchestration for horizontal scalability."
     ],
-    tags: ["Next.js", "TypeScript", "Flask", "OpenAI", "Docker"]
   },
   {
     title: "Clatri",
@@ -47,7 +46,6 @@ export const projects = [
       "Integrated OpenAI SDK for natural language processing and complex task automation.",
       "Implemented RESTful API with FastAPI, validation with Pydantic and OpenAPI/Swagger documentation."
     ],
-    tags: ["Flask", "Python", "OpenAI", "FastAPI"]
   },
   {
     title: "Plan Your Product",
@@ -56,7 +54,6 @@ export const projects = [
       "Architected GitHub API integration using OAuth 2.0 for authentication and repositories as data store.",
       "Implemented abstraction layer for CRUD operations over GitHub as serverless database."
     ],
-    tags: ["GitHub API", "OAuth 2.0"]
   },
   {
     title: "Simplus WhatsApp Link",
@@ -65,7 +62,6 @@ export const projects = [
     description: [
       "Open source library for WhatsApp link generation with parameter validation and URL encoding."
     ],
-    tags: ["Open Source", "WhatsApp API"]
   }
 ];
 
@@ -130,15 +126,4 @@ export const certifications = [
   }
 ];
 
-export const skills = {
-  Languages: ["C#", "Python", "TypeScript", "JavaScript", "SQL", "HTML", "CSS"],
-  Frontend: ["React", "Next.js", "Angular", "Flutter", "Tailwind CSS"],
-  Backend: [".NET", "Flask", "FastAPI", "PostgreSQL", "Supabase"],
-  AI: ["OpenAI SDK", "Gemini SDK", "Vertex AI", "Cursor", "Claude Code", "v0"],
-  Cloud_Infrastructure: ["Cloudflare R2", "Cloudflare Stream", "Railway", "VPS", "Linux", "Vercel", "Netlify"],
-  DevOps_Tools: ["Docker", "Git", "GitHub", "CI/CD"],
-  Platforms: ["Zoho CRM", "Zoho Creator", "Zoho Flow", "Zoho Analytics", "WordPress"],
-  Integrations: ["Stripe", "RevenueCat", "Twilio", "GitHub API", "WhatsApp API"],
-  Spoken_Languages: ["Spanish (Native)", "English (B1)"]
-};
 
