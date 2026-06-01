@@ -17,3 +17,6 @@ El objetivo de este blog es como hacer una bitacora semana de mi camino hacia so
     - organizar los posts y escribir el primer post.
     - agregar la sección de experince.
     - Revisar la ortografia de todo el sitio
+
+
+
